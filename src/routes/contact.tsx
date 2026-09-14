@@ -50,7 +50,7 @@ function Contact() {
                 <a href="tel:07586339259" className="hover:text-teal-700">07586 339259</a> — 24/7 emergency line
               </InfoRow>
               <InfoRow icon={Mail} title="Email">
-                <a href="mailto:hello@home24x7.co.uk" className="hover:text-teal-700">hello@home24x7.co.uk</a>
+                <a href="mailto:info@home24x7.co.uk" className="hover:text-teal-700">info@home24x7.co.uk</a>
               </InfoRow>
               <InfoRow icon={MapPin} title="Office">
                 London, UK
