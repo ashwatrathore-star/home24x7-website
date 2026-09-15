@@ -149,7 +149,7 @@ function Home() {
               className="rounded-xl object-cover h-64 w-full"
             />
             <img
-              src="https://images.unsplash.com/photo-1621905252472-e52c2c8a3d3f?auto=format&fit=crop&w=800&q=80"
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
               alt="Electrician testing a consumer unit"
               className="rounded-xl object-cover h-64 w-full mt-8"
             />
