@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Award, HeartHandshake, ShieldCheck, Target, Users } from 'lucide-react'
+import { ClipboardCheck, HeartHandshake, Phone, ShieldCheck, Users, Wrench } from 'lucide-react'
 import { PageHero } from '@/components/PageHero'
 import { TrustBadges } from '@/components/TrustBadges'
 import { CtaBand } from '@/components/CtaBand'
@@ -11,28 +11,41 @@ export const Route = createFileRoute('/about')({
       {
         name: 'description',
         content:
-          'Learn about Home24x7 Build and Repair — an accredited property maintenance and construction company serving London and the UK for over 15 years.',
+          'Learn about Home24x7 Build and Repair — an accredited property maintenance and construction company serving London and the UK.',
       },
     ],
   }),
   component: About,
 })
 
-const team = [
+const process = [
   {
-    name: 'Michael Adeyemi',
-    role: 'Managing Director',
-    bio: 'Over 20 years in construction and facilities management, leading operations and client relationships.',
+    step: '01',
+    icon: Phone,
+    title: 'You get in touch',
+    body: 'Call our 24/7 line for emergencies, or request a free quote for planned work — whichever suits your situation.',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80',
   },
   {
-    name: 'Claire Doherty',
-    role: 'Head of Compliance',
-    bio: 'Oversees certification and regulatory compliance across every job, from EICR to fire safety.',
+    step: '02',
+    icon: ClipboardCheck,
+    title: 'We assess and quote',
+    body: 'An accredited engineer reviews the job on-site or via photos, and you receive a clear, fixed-price quote before anything starts.',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80',
   },
   {
-    name: 'Tomasz Wirski',
-    role: 'Operations Manager',
-    bio: 'Coordinates our multi-trade engineer network and 24/7 emergency response rota.',
+    step: '03',
+    icon: Wrench,
+    title: 'Work gets scheduled and done',
+    body: 'A vetted, DBS-checked trade completes the job to the agreed timeline, with regular updates if it\u2019s a larger project.',
+    image: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    step: '04',
+    icon: HeartHandshake,
+    title: 'You get sign-off, in writing',
+    body: 'Every job ends with a completion report or compliance certificate, filed for your records — nothing left informal or undocumented.',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80',
   },
 ]
 
@@ -42,7 +55,7 @@ function About() {
       <PageHero
         eyebrow="About Home24x7"
         title="Property maintenance and construction, done properly"
-        description="For over 15 years, Home24x7 Build and Repair has helped homeowners, landlords and businesses keep their properties safe, compliant and well maintained — day or night."
+        description="Home24x7 Build and Repair helps homeowners, landlords and businesses keep their properties safe, compliant and well maintained — day or night."
         image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80"
       />
 
@@ -53,16 +66,16 @@ function About() {
               Our story
             </p>
             <h2 className="text-3xl font-bold text-slate-900 mb-5">
-              Founded on a simple idea: one call should be enough
+              Built on a simple idea: one call should be enough
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Home24x7 Build and Repair was founded to solve a common frustration for landlords
+              Home24x7 Build and Repair exists to solve a common frustration for landlords
               and homeowners alike — juggling separate plumbers, electricians, decorators and
-              builders for every repair. We built a single company that brings every trade
-              together, backed by proper accreditation and round-the-clock availability.
+              builders for every repair. We bring every trade together, backed by proper
+              accreditation and round-the-clock availability.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Today we support residential, commercial, and landlord clients across all of
+              We support residential, commercial, and landlord clients across all of
               London and the wider UK, from single emergency call-outs to full construction
               and refurbishment projects.
             </p>
@@ -79,11 +92,6 @@ function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <ValueCard
-              icon={Target}
-              title="Our mission"
-              body="To be the most trusted, responsive property maintenance partner in the UK."
-            />
-            <ValueCard
               icon={ShieldCheck}
               title="Accredited"
               body="Gas Safe registered, NICEIC/ECA approved, and fully insured on every job."
@@ -97,6 +105,11 @@ function About() {
               icon={HeartHandshake}
               title="No-nonsense"
               body="Clear pricing, honest timelines, and straight answers — no jargon."
+            />
+            <ValueCard
+              icon={ClipboardCheck}
+              title="Fully documented"
+              body="Every job is photo-reported and signed off, so you always have a record."
             />
           </div>
         </div>
@@ -116,16 +129,32 @@ function About() {
 
       <section className="py-20 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex items-center gap-3 mb-12">
-            <Award className="size-8 text-amber-500" />
-            <h2 className="text-3xl font-bold text-slate-900">Leadership team</h2>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-teal-700 font-semibold text-sm tracking-wide uppercase mb-2">
+              How we work
+            </p>
+            <h2 className="text-3xl font-bold text-slate-900">
+              From first call to finished job
+            </h2>
           </div>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {team.map((m) => (
-              <div key={m.name} className="rounded-xl bg-white border border-slate-200 p-6">
-                <p className="font-bold text-slate-900">{m.name}</p>
-                <p className="text-sm text-amber-600 font-semibold mb-3">{m.role}</p>
-                <p className="text-sm text-slate-600 leading-relaxed">{m.bio}</p>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {process.map((p) => (
+              <div key={p.step} className="rounded-xl bg-white border border-slate-200 overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="h-40 w-full object-cover"
+                />
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="flex size-8 items-center justify-center rounded-md bg-slate-950 text-amber-500 shrink-0">
+                      <p.icon className="size-4" />
+                    </span>
+                    <span className="text-xs font-mono text-slate-400">{p.step}</span>
+                  </div>
+                  <h3 className="font-bold text-slate-900 mb-2">{p.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">{p.body}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -151,7 +180,7 @@ function ValueCard({
   title,
   body,
 }: {
-  icon: typeof Target
+  icon: typeof ShieldCheck
   title: string
   body: string
 }) {
