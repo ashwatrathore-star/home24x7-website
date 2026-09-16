@@ -144,7 +144,7 @@ function Home() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+              src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=800&q=80"
               alt="Tradesperson carrying out a repair"
               className="rounded-xl object-cover h-64 w-full"
             />
