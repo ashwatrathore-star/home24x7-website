@@ -27,7 +27,7 @@ export function Header() {
           </a>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 gap-4">
           <Link to="/" className="flex items-center gap-2 shrink-0">
             <span className="flex size-9 items-center justify-center rounded-md bg-amber-500 text-slate-950 font-black text-lg shrink-0">
@@ -41,7 +41,7 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden 2xl:flex items-center gap-5 min-w-0">
+          <nav className="hidden 2xl:flex items-center gap-4 min-w-0">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
