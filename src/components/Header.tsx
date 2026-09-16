@@ -41,7 +41,7 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-5 min-w-0">
+          <nav className="hidden 2xl:flex items-center gap-5 min-w-0">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -54,7 +54,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden xl:flex items-center gap-3 shrink-0">
+          <div className="hidden 2xl:flex items-center gap-3 shrink-0">
             <Link
               to="/emergency-callout"
               className="rounded-md bg-red-600 hover:bg-red-500 text-white text-sm font-semibold px-4 py-2 transition-colors whitespace-nowrap"
@@ -71,7 +71,7 @@ export function Header() {
 
           <button
             type="button"
-            className="xl:hidden text-white p-2 shrink-0"
+            className="2xl:hidden text-white p-2 shrink-0"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation menu"
           >
@@ -81,7 +81,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="xl:hidden border-t border-white/10 bg-slate-950">
+        <div className="2xl:hidden border-t border-white/10 bg-slate-950">
           <nav className="flex flex-col px-4 py-3 gap-1">
             {navLinks.map((link) => (
               <Link
