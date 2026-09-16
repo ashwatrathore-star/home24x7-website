@@ -36,7 +36,7 @@ const services: Array<Service> = [
       'Central heating system upgrades',
     ],
     image:
-      'https://images.unsplash.com/photo-1607472829322-3fa6f77b8c50?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1722411487131-23bb3ac91df3?auto=format&fit=crop&w=1200&q=80',
   },
   {
     slug: 'electrical',
@@ -51,7 +51,7 @@ const services: Array<Service> = [
       'Lighting, sockets and power installations',
     ],
     image:
-      'https://images.unsplash.com/photo-1621905252472-e52c2c8a3d3f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=1200&q=80',
   },
   {
     slug: 'carpentry-joinery',
