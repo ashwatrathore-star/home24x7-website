@@ -18,22 +18,22 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur border-b border-white/10">
-      <div className="bg-amber-500 text-slate-950 text-sm font-semibold">
+      <div className="bg-amber-500 text-slate-950 text-xs sm:text-sm font-semibold">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-1.5 flex items-center justify-between gap-2">
-          <span className="tracking-wide">24/7 EMERGENCY CALL-OUT — LONDON &amp; UK WIDE</span>
-          <a href="tel:07586339259" className="flex items-center gap-1 whitespace-nowrap hover:underline">
+          <span className="tracking-wide truncate">24/7 EMERGENCY CALL-OUT — LONDON &amp; UK WIDE</span>
+          <a href="tel:07586339259" className="flex items-center gap-1 whitespace-nowrap hover:underline shrink-0">
             <Phone className="size-3.5" />
             07586 339259
           </a>
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 gap-4">
           <Link to="/" className="flex items-center gap-2 shrink-0">
-            <span className="flex size-9 items-center justify-center rounded-md bg-amber-500 text-slate-950 font-black text-lg">
+            <span className="flex size-9 items-center justify-center rounded-md bg-amber-500 text-slate-950 font-black text-lg shrink-0">
               24
             </span>
-            <span className="text-white font-bold text-lg leading-tight">
+            <span className="text-white font-bold text-lg leading-tight whitespace-nowrap">
               Home24x7
               <span className="block text-[11px] font-medium text-slate-400 tracking-wide">
                 BUILD &amp; REPAIR
@@ -41,12 +41,12 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden xl:flex items-center gap-5 min-w-0">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors whitespace-nowrap"
                 activeProps={{ className: 'text-white' }}
               >
                 {link.label}
@@ -54,16 +54,16 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3 shrink-0">
             <Link
               to="/emergency-callout"
-              className="rounded-md bg-red-600 hover:bg-red-500 text-white text-sm font-semibold px-4 py-2 transition-colors"
+              className="rounded-md bg-red-600 hover:bg-red-500 text-white text-sm font-semibold px-4 py-2 transition-colors whitespace-nowrap"
             >
               Emergency Call-Out
             </Link>
             <Link
               to="/quote"
-              className="rounded-md bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-semibold px-4 py-2 transition-colors"
+              className="rounded-md bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-semibold px-4 py-2 transition-colors whitespace-nowrap"
             >
               Get a Free Quote
             </Link>
@@ -71,7 +71,7 @@ export function Header() {
 
           <button
             type="button"
-            className="lg:hidden text-white p-2"
+            className="xl:hidden text-white p-2 shrink-0"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation menu"
           >
@@ -81,7 +81,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-white/10 bg-slate-950">
+        <div className="xl:hidden border-t border-white/10 bg-slate-950">
           <nav className="flex flex-col px-4 py-3 gap-1">
             {navLinks.map((link) => (
               <Link
