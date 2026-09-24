@@ -1,0 +1,1 @@
+User-agent: * Allow: / Sitemap: https://home24x7.co.uk/sitemap.xml
